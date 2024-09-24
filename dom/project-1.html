@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 200px;
+        border: 10px dashed rgb(199, 37, 64);
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <br />
+    <img alt="" />
+    <button id="btn">click me!</button>
+    <script>
+      const heading = document.querySelector("h1");
+
+      const btn = document.querySelector("button");
+
+      let image = document.querySelector("img");
+      image.setAttribute("src", "img1.jpg");
+      heading.append(image);
+
+      let arrChange = 0;
+      arr = ["img1.jpg", "img3.jpg", "img2.jpg"];
+      arr2 = ["Hello Jupiter", "Hello World", "Hello Mars"];
+      btn.addEventListener("click", function () {
+        arrChange = Math.floor(Math.random() * arr.length);
+        image.src = arr[arrChange];
+        console.log(arrChange);
+      });
+    </script>
+  </body>
+</html>

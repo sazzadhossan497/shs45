@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 id="tital" title="hello world" class="myClass">
+      Sazzad Hossain Saimon
+    </h1>
+    <p class="para">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus
+      magni nisi doloremque quaerat dolor, quisquam maiores aperiam. Neque, eum
+      molestias?
+    </p>
+    <p class="para">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio quis
+      similique atque, neque earum, delectus officiis, incidunt placeat iste
+      facilis rem obcaecati error inventore est vel nihil expedita at
+      dignissimos.
+    </p>
+
+    <ul>
+      <li>item one</li>
+      <li>item two</li>
+      <li>item three</li>
+      <li>item four</li>
+    </ul>
+
+    <script>
+      // single- element selactor
+      const tital = document.getElementById("tital");
+      tital.textContent = "hello saimon i am from dom";
+      tital.setAttribute("title", "hello");
+      console.log(tital.getAttribute("class"));
+
+      const para = document.querySelector("p");
+      para.textContent = "dom means document object model";
+      const list = document.querySelector("li");
+      list.textContent = "hello";
+    </script>
+  </body>
+</html>

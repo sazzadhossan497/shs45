@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Image Generator</title>
+    <style>
+      img {
+        width: 300px;
+        height: 500px;
+        border: 2px solid dashed;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="randomImage"
+      src="img1.jpg"
+      alt="Random Image"
+      style="display: block; margin-top: 20px"
+    />
+    <button onclick="displayRandomImage()">Generate Random Image</button>
+
+    <script>
+      const images = ["img3.jpg", "img2.jpg", "img1.jpg"];
+
+      function displayRandomImage() {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        document.getElementById("randomImage").src = images[randomIndex];
+      }
+    </script>
+  </body>
+</html>
